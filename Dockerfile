@@ -1,5 +1,5 @@
 FROM node:16-alpine as build
 
-WORKDIR /site
-COPY ./ /site
+WORKDIR /web
+COPY ./ /web/
 RUN pnpm install
