@@ -1,27 +1,23 @@
-const DEFAULT_DATA = { latestVersion: '' }
-let currentData = null
+let currentData = {}
 
 module.exports = async function getLatestReleaseVersion() {
-	if (currentData) {
-		return currentData
-	}
-	try {
-		const fetch = await import('node-fetch')
-		const res = await fetch(
-			'https://api.github.com/repos/umputun/remark42/releases'
-		)
+  if (currentData.latestVersion) {
+    return currentData
+  }
 
-		if (!res.ok) {
-			throw new Error(`[ERROR] Status: ${res.status}: ${res.statusText}`)
-		}
+  try {
+    const fetch = await import('node-fetch')
+    const res = await fetch(process.env.GITHUB_REPO_URL)
 
-		const data = await res.json()
+    if (!res.ok) {
+      throw new Error(`[ERROR] Status: ${res.status}: ${res.statusText}`)
+    }
 
-		currentData = { latestVersion: data[0].tag_name || '' }
+    const data = await res.json()
 
-		return currentData
-	} catch (e) {
-		console.error(e.message)
-		return DEFAULT_DATA
-	}
+    return { currentData: data[0].tag_name || '' }
+  } catch (e) {
+    console.error(e.message)
+    return currentData
+  }
 }
