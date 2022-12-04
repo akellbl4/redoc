@@ -4,22 +4,22 @@
 
 Requirements:
 
-* [Node.js v14](https://nodejs.org/en/) or higher - install from package or with Homebrew
-* Yarn 1.22 or higher - once you have Node.js, run `npm i -g yarn`
+- [Node.js v16](https://nodejs.org/en/) or higher - install from package or with Homebrew
+- PNPM 7.9 or higher - once you have Node.js, run `npm i -g pnpm`
 
 ### Development
 
 Install dependencies and start the development server:
 
 ```shell
-yarn
-yarn dev
+pnpm install
+pnpm dev
 ```
 
 ### Build
 
 ```shell
-yarn build
+pnpm build
 ```
 
 ## Work with Docker Compose
