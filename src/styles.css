@@ -1,46 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .prose code {
-	@apply before:hidden after:hidden text-brand-800 dark:text-brand-300 font-light;
+  @apply before:hidden after:hidden text-brand-800 dark:text-brand-300 font-light;
 }
 .prose strong code {
-	@apply font-bold text-yellow-600 dark:text-yellow-400;
+  @apply font-bold text-yellow-600 dark:text-yellow-400;
 }
 
 .burger-icon {
-	@apply relative inline-block w-4 h-4 mr-3;
+  @apply relative inline-block w-4 h-4 mr-3;
 }
 
 .burger-icon div {
-	@apply absolute bg-gray-400 rounded transition-all transform w-full h-[2px];
+  @apply absolute bg-gray-400 rounded transition-all transform w-full h-[2px];
 }
 
 .burger-icon div:nth-child(1) {
-	@apply left-0 top-0;
+  @apply left-0 top-0;
 }
 
 .burger-icon div:nth-child(2) {
-	@apply left-0 top-[7px];
+  @apply left-0 top-[7px];
 }
 
 .burger-icon div:nth-child(3) {
-	@apply left-0 bottom-0;
+  @apply left-0 bottom-0;
 }
 
 .menu-state:checked ~ nav {
-	@apply block;
+  @apply block;
 }
 
 .menu-state:checked ~ label .burger-icon div:nth-child(1) {
-	@apply -rotate-45 scale-x-[0.7] top-[7px] left-[-3px];
+  @apply -rotate-45 scale-x-[0.7] top-[7px] left-[-3px];
 }
 .menu-state:checked ~ label .burger-icon div:nth-child(2) {
-	@apply scale-0 duration-75;
+  @apply scale-0 duration-75;
 }
 .menu-state:checked ~ label .burger-icon div:nth-child(3) {
-	@apply rotate-45 scale-x-[0.7] top-[7px] left-[4px];
+  @apply rotate-45 scale-x-[0.7] top-[7px] left-[4px];
 }
 
 .token.comment,
@@ -48,18 +44,18 @@
 .token.doctype,
 .token.cdata,
 .token.punctuation {
-	@apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-	@apply text-brand-800 dark:text-brand-200;
+  @apply text-brand-800 dark:text-brand-200;
 }
 
 .token.delimiter.important,
 .token.selector .parent,
 .token.tag,
 .token.tag .token.punctuation {
-	@apply text-brand-600 dark:text-brand-300 font-semibold;
+  @apply text-brand-600 dark:text-brand-300 font-semibold;
 }
 
 .token.attr-name,
@@ -68,7 +64,7 @@
 .token.number,
 .token.constant,
 .token.selector .token.attribute {
-	@apply font-normal text-yellow-600 dark:text-yellow-500;
+  @apply font-normal text-yellow-600 dark:text-yellow-500;
 }
 
 .token.class-name,
@@ -77,7 +73,7 @@
 .token.property,
 .token.property-access,
 .token.variable {
-	@apply text-yellow-600 dark:text-yellow-400;
+  @apply text-yellow-600 dark:text-yellow-400;
 }
 
 .token.attr-value,
@@ -86,20 +82,20 @@
 .token.selector .token.value,
 .token.string,
 .token.string .token.url-link {
-	@apply text-brand-800 dark:text-brand-300 font-normal;
+  @apply text-brand-800 dark:text-brand-300 font-normal;
 }
 
 .token.builtin,
 .token.keyword-array,
 .token.package,
 .token.regex {
-	color: #af00af;
+  color: #af00af;
 }
 
 .token.function,
 .token.selector .token.class,
 .token.selector .token.id {
-	color: #7c00aa;
+  color: #7c00aa;
 }
 
 .token.atrule .token.rule,
@@ -110,78 +106,78 @@
 .token.pseudo-element,
 .token.selector,
 .token.unit {
-	@apply text-pink-700 dark:text-pink-300;
+  @apply text-pink-700 dark:text-pink-300;
 }
 
 .token.deleted,
 .token.important {
-	color: #c22f2e;
+  color: #c22f2e;
 }
 
 .token.keyword-this,
 .token.this {
-	color: #005a8e;
+  color: #005a8e;
 }
 
 .token.important,
 .token.keyword-this,
 .token.this,
 .token.bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .token.delimiter.important {
-	font-weight: inherit;
+  font-weight: inherit;
 }
 
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 .token.entity {
-	cursor: help;
+  cursor: help;
 }
 
 .language-markdown .token.title,
 .language-markdown .token.title .token.punctuation {
-	color: #005a8e;
-	font-weight: bold;
+  color: #005a8e;
+  font-weight: bold;
 }
 
 .language-markdown .token.blockquote.punctuation {
-	color: #af00af;
+  color: #af00af;
 }
 
 .language-markdown .token.code {
-	color: #006d6d;
+  color: #006d6d;
 }
 
 .language-markdown .token.hr.punctuation {
-	color: #005a8e;
+  color: #005a8e;
 }
 
 .language-markdown .token.url > .token.content {
-	color: #116b00;
+  color: #116b00;
 }
 
 .language-markdown .token.url-link {
-	color: #755f00;
+  color: #755f00;
 }
 
 .language-markdown .token.list.punctuation {
-	color: #af00af;
+  color: #af00af;
 }
 
 .language-markdown .token.table-header {
-	color: #111b27;
+  color: #111b27;
 }
 
 .language-json .token.operator {
-	color: #111b27;
+  color: #111b27;
 }
 
 .language-scss .token.variable {
-	color: #006d6d;
+  color: #006d6d;
 }
 
 /* overrides color-values for the Show Invisibles plugin
@@ -191,5 +187,5 @@
 .token.cr:before,
 .token.lf:before,
 .token.space:before {
-	color: #3c526d;
+  color: #3c526d;
 }

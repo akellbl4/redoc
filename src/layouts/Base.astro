@@ -1,0 +1,89 @@
+---
+import fs from 'node:fs'
+import 'styles.css'
+import site from 'site.json'
+
+import Header from 'components/Header.astro'
+
+export interface Props {
+	title?: string
+	description?: string
+}
+
+const hasAppleTouchIcon = fs.existsSync('../public/apple-touch-icon.png')
+const hasFavicon16 = fs.existsSync('../public/favicon-16x16.png')
+const hasFavicon32 = fs.existsSync('../public/favicon-32x32.png')
+const hasManifest = fs.existsSync('../public/site.webmanifest')
+
+const { props } = Astro
+const data = props.frontmatter ?? props
+const title = data.title ? `${data.title} | ${site.title}` : site.title
+const description = data.description ?? site.description
+
+const github = { latestVersion: null }
+
+console.log(props.frontmatter)
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{
+			hasAppleTouchIcon && (
+				<link
+					rel="apple-touch-icon"
+					sizes="180x180"
+					href="/apple-touch-icon.png"
+				/>
+			)
+		}
+		{
+			hasFavicon32 && (
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon-32x32.png"
+				/>
+			)
+		}
+		{
+			hasFavicon16 && (
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+					href="/favicon-16x16.png"
+				/>
+			)
+		}
+		{hasManifest && <link rel="manifest" href="/site.webmanifest" />}
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<script is:inline>
+			const root = document.documentElement
+			const theme = localStorage.getItem('theme')
+			if (
+				theme === 'dark' ||
+				(!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				root.classList.add('theme-dark')
+			} else {
+				root.classList.remove('theme-dark')
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container mx-auto px-8">
+			<Header
+				title={site.title}
+				latestVersion={github.latestVersion}
+				nav={site.nav}
+				githubUrl={site.githubUrl}
+			/>
+			<slot />
+		</div>
+	</body>
+</html>

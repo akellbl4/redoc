@@ -1,0 +1,14 @@
+---
+import DocsNav from 'components/DocsNav.astro'
+import Base from './Base.astro'
+import site from 'site.json'
+---
+
+<Base>
+	<div class="md:flex">
+		<DocsNav menu={site.docsMenu} />
+		<div class="prose max-w-none overflow-hidden">
+			<slot />
+		</div>
+	</div>
+</Base>

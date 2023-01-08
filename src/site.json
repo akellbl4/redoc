@@ -1,0 +1,135 @@
+{
+	"title": "redocs",
+	"description": "Simple docs built with Astro and Tailwind",
+	"githubUrl": "https://github.com/akellbl4/redocs",
+	"enableReleasesPage": true,
+	"nav": [
+		{
+			"title": "Demo",
+			"url": "/demo/"
+		},
+		{
+			"title": "Docs",
+			"url": "/docs/getting-started/installation/"
+		},
+		{
+			"title": "Releases",
+			"url": "/releases/"
+		}
+	],
+	"docsMenu": [
+		{
+			"section": "Getting Started",
+			"children": [
+				{
+					"title": "Installation",
+					"href": "/docs/getting-started/installation/"
+				}
+			]
+		},
+		{
+			"section": "Configuration",
+			"children": [
+				{
+					"title": "Frontend",
+					"href": "/docs/configuration/frontend/"
+				},
+				{
+					"title": "CLI parameters",
+					"href": "/docs/configuration/parameters/"
+				},
+				{
+					"title": "Authorization",
+					"href": "/docs/configuration/authorization/"
+				},
+				{
+					"title": "Notifications",
+					"href": "/docs/configuration/notifications/"
+				},
+				{
+					"title": "Email",
+					"href": "/docs/configuration/email/"
+				},
+				{
+					"title": "Telegram",
+					"href": "/docs/configuration/telegram/"
+				}
+			]
+		},
+		{
+			"section": "Manuals",
+			"children": [
+				{
+					"title": "Admin UI",
+					"href": "/docs/manuals/admin-interface/"
+				},
+				{
+					"title": "Without subdomain",
+					"href": "/docs/manuals/subdomain/"
+				},
+				{
+					"title": "On a separate domain",
+					"href": "/docs/manuals/separate-domain/"
+				},
+				{
+					"title": "Reproxy",
+					"href": "/docs/manuals/reproxy/"
+				},
+				{
+					"title": "Nginx",
+					"href": "/docs/manuals/nginx/"
+				},
+				{
+					"title": "Kubernetes",
+					"href": "/docs/manuals/kubernetes/"
+				},
+				{
+					"title": "Gatsby Integration",
+					"href": "/docs/manuals/integration-with-gatsby/"
+				}
+			]
+		},
+		{
+			"section": "Backup",
+			"children": [
+				{
+					"title": "Backup",
+					"href": "/docs/backup/backup/"
+				},
+				{
+					"title": "Restore",
+					"href": "/docs/backup/restore/"
+				},
+				{
+					"title": "Migration",
+					"href": "/docs/backup/migration/"
+				},
+				{
+					"title": "Site URL migration",
+					"href": "/docs/backup/url-migration/"
+				}
+			]
+		},
+		{
+			"section": "Contributing",
+			"children": [
+				{
+					"title": "Backend",
+					"href": "/docs/contributing/backend/"
+				},
+				{
+					"title": "Frontend",
+					"href": "/docs/contributing/frontend/"
+				},
+				{
+					"title": "Translations",
+					"href": "/docs/contributing/translations/"
+				},
+				{
+					"title": "API",
+					"href": "/docs/contributing/api/"
+				}
+			]
+		}
+	]
+}
